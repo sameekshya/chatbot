@@ -1,0 +1,77 @@
+Bot: VehicleCargoTransport
+Description: A chatbot to assist in booking shipment of vehicles
+
+
+Intent: CargoRegister
+
+Sample utterances --
+I would like to send few stuffs
+I would like to send my stuffs
+I would like to ship few stuffs
+I would like to ship my stuffs
+I would like to transport few stuffs
+I would like to transport my stuffs
+I want to ship my items
+I want to ship few items
+I want to send my items
+I want to send few items
+I want to transport my items
+I want to transport few items
+I want to transport items
+I want to send items
+I want to ship items
+I would like to transport stuffs
+I would like to ship stuffs
+I would like to send stuffs
+I would like to transport items
+I would like to ship items
+I would like to send items
+I want to ship stuffs
+I want to send stuffs
+I want to transport stuffs
+i would like to transport {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}​
+I would like to send few {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}​
+I would like to ship some {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}
+I would like to send {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}​
+I would like to ship {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}​
+I would like to ship few {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}​
+I would like to transport few {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}​
+I would like to transport some {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}​
+I would like to send some {CargoType}​ from {LoadingPort}​ to {DeportingPort}​ on {TransportDate}​
+
+Slot types --
+CargoType: Hello there! welcome to vehicle transport. Please specify the cargo type
+LoadingPort: Please specify the loading port from which cargo is picked?
+DeportingPort: Please specify the destination port to which cargo needs to be delivered?
+TransportDate: Please specify the date on which cargo is expected to be picked
+TransportTime: Please specify the time at which the cargo needs to be picked up
+Email: Please provide your email address
+
+Confirmation prompt --
+Could we place your {CargoType} from {LoadingPort} to {DeportingPort} on {TransportDate} at {TransportTime}?
+Okay, your current cargo transport booking has been cancelled. Would you like to make a new booking for transport?
+
+Fulfillment --
+Thank you, your order for transport of ${cargoType} on ${transportDate} from ${loadingPort} to ${deportingPort} has been registered. Please allow us 2-3 working days to send you details through email
+
+Clarification prompts --
+Apologies, I was not able to get you last time. Could you please say that again ?
+Sorry, can you please repeat that?
+
+Hang-up phrase --
+Sorry, I could not understand. Please contact our customer care for further assistance.
+
+
+Intent: CargoHelp
+help
+could you help me in booking
+please help me
+i don't understand
+how can i book registration for cargo booking
+help me
+what does this mean
+how to register
+i am not able to get you
+SOS
+help me with booking
+
